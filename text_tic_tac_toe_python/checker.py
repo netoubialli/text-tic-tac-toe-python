@@ -12,8 +12,8 @@ def check_move(move, game_board):
 
     game_board.set_player_move(move)
 
-    if is_a_win_move(board)
-        raise Exception(getWinMessage(move, board))
+    #if is_a_win_move(board)
+    #    raise Exception(getWinMessage(move, board))
 
 
     #if is_a_tie_move(player_move, board):
@@ -21,6 +21,7 @@ def check_move(move, game_board):
     #    return
 
     return True
+
 
 def is_a_give_up_move(move):
     return move == '0'
