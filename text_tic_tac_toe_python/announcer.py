@@ -39,6 +39,7 @@ def print_game_board(game_board):
     print_something(game_board[3] + '|' + game_board[4] + '|' + game_board[5])
     print_something('-|-|-')
     print_something(game_board[6] + '|' + game_board[7] + '|' + game_board[8])
+    print_blank_line()
 
 
 def print_blank_game_board():
@@ -50,4 +51,4 @@ def ask_player_next_move():
 
 
 def print_invalid_move_msg():
-    print_something('You made an invalid move. Pleas, try again!')
+    print_something('You made an invalid move. Please, try again!')

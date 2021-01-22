@@ -10,7 +10,6 @@ class GameBoard:
         if player_symbol == 'X':
             self.robot_symbol = 'O'
 
-
     def set_player_move(self, move):
         self.set_move(move, self.player_symbol)
 

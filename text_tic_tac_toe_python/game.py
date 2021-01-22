@@ -1,5 +1,6 @@
-from text_tic_tac_toe_python.announcer import ask_player_symbol, print_welcome_msg, print_game_board, ask_player_next_move
-from text_tic_tac_toe_python.checker import is_a_valid_symbol, check_player_move
+from text_tic_tac_toe_python.announcer import ask_player_symbol, print_welcome_msg, print_game_board, \
+    ask_player_next_move, print_invalid_move_msg
+from text_tic_tac_toe_python.checker import is_a_valid_symbol, check_move
 from text_tic_tac_toe_python.game_board import GameBoard
 
 
@@ -7,9 +8,8 @@ def play(player_symbol):
     game_board = GameBoard(player_symbol)
     print_game_board(game_board.board)
 
-    #while True:
-    #    if not next_player_move(game_board):
-    #        continue
+    while True:
+        next_player_move(game_board)
         #next_robot_move()
 
 
@@ -23,5 +23,12 @@ def initialize_game():
 
 
 def next_player_move(game_board):
-    move = ask_player_next_move()
-    check_player_move(move, game_board)
+    checked = False
+    while not checked:
+        move = ask_player_next_move()
+        checked = check_move(move, game_board)
+        if not checked:
+            print_invalid_move_msg()
+            print_game_board(game_board.board)
+
+    print_game_board(game_board.board)
