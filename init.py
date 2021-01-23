@@ -1,8 +1,9 @@
-from text_tic_tac_toe_python.announcer import print_something
-from text_tic_tac_toe_python.game import initialize_game
+from text_tic_tac_toe_python.announcer import print_welcome_msg
+from text_tic_tac_toe_python.game import Game
 
 if __name__ == '__main__':
     try:
-        initialize_game()
+        print_welcome_msg()
+        Game()
     except Exception as e:
-        print_something(e)
+        print(e)
